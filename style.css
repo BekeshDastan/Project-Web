@@ -1,0 +1,451 @@
+:root {
+    --primary-color: #ff4655;
+    --secondary-color: #ffd700;
+    --dark-bg: #0a0a0a;
+    --card-bg: #1e1e30;
+    --text-light: #aaa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #1a1a2e 100%);
+    color: #fff;
+    min-height: 100vh;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--primary-color);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    transition: all 0.3s;
+    position: relative;
+    margin: 0 0.5rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: all 0.3s;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.95);
+    border-top: 2px solid var(--primary-color);
+    padding: 3rem 0 1rem;
+    margin-top: 5rem;
+}
+
+.footer-title {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+}
+
+.page-content {
+    min-height: calc(100vh - 400px);
+    padding: 2rem 0;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 3rem;
+    margin: 3rem 0;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInUp 0.8s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), radial-gradient(circle at 50% 50%, rgba(255, 70, 85, 0.1), transparent 70%);
+}
+
+.hero-section h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 20px rgba(255, 70, 85, 0.5);
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+.btn-custom {
+    background: linear-gradient(45deg, var(--primary-color), #ff6675);
+    border: none;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: all 0.3s;
+    margin-top: 2rem;
+}
+
+.btn-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 70, 85, 0.4);
+    background: linear-gradient(45deg, #ff6675, var(--primary-color));
+    color: #fff;
+}
+
+.car-card {
+    background: linear-gradient(145deg, var(--card-bg), #2a2a3e);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid transparent;
+    margin-bottom: rem;
+    cursor: pointer;
+    height: 95%;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 40px rgba(255, 70, 85, 0.3);
+}
+
+.car-image {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f1f2f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease; 
+}
+
+.car-image img:hover {
+    transform: scale(1.05);
+}
+.car-info {
+    padding: 1.5rem;
+}
+
+.car-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.car-price {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.car-brief {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.modal-content {
+    background: linear-gradient(145deg, var(--card-bg), #2a2a3e);
+    border: 2px solid var(--primary-color);
+    color: #fff;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-title {
+    color: var(--primary-color);
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+.spec-item {
+    background: rgba(255, 70, 85, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.spec-label {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.spec-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.about-card {
+    background: linear-gradient(145deg, var(--card-bg), #2a2a3e);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.about-card:hover {
+    border-color: var(--primary-color);
+}
+
+.about-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.gallery-placeholder {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    transition: transform 0.5s;
+}
+
+.gallery-item:hover .gallery-placeholder {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    padding: 2rem 1rem 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.form-control,
+.form-select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 0.8rem;
+    border-radius: 10px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(255, 70, 85, 0.25);
+}
+
+.form-control::placeholder {
+    color: var(--text-light);
+}
+
+.form-label {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.contact-info-box {
+    background: linear-gradient(145deg, var(--card-bg), #2a2a3e);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.contact-info-box i {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.accordion-item {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+    border-radius: 10px !important;
+    overflow: hidden;
+}
+
+.accordion-button {
+    background: var(--card-bg);
+    color: #fff;
+    font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(145deg, var(--card-bg), #2a2a3e);
+    color: var(--primary-color);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+.accordion-body {
+    background: var(--card-bg);
+    color: var(--text-light);
+}
+
+.carousel-item {
+    height: 600px;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.alert {
+    border-radius: 10px;
+}
+
+.form-text {
+    color: var(--text-light);
+}
+
+.invalid-feedback {
+    color: #ff6b6b;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+}
+
+.car-card {
+    margin-bottom: 10px;
+}
