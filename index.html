@@ -8,14 +8,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
     <nav class="navbar  navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a href="#" class="navbar-brand ">
-                <i class="fas fa-car-side"></i> AITU-MOTORS
-            </a>
+            <a href="#" class="navbar-brand "> AITU-MOTORS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -23,19 +22,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" onclick="showPage('home'); return false;">Home</a>
+                        <a class="nav-link active" href="#" onclick="showPage('home')">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showPage('collection'); return false;">Collection</a>
+                        <a class="nav-link" href="#" onclick="showPage('collection')">Collection</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showPage('gallery'); return false;">Gallery</a>
+                        <a class="nav-link" href="#" onclick="showPage('news')">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showPage('about'); return false;">About</a>
+                        <a class="nav-link" href="#" onclick="showPage('about')">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showPage('contact'); return false;">Contact</a>
+                        <a class="nav-link" href="#" onclick="showPage('contact')">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -44,7 +43,7 @@
 
     <div id="homePage" class="page">
         <div class="hero-section">
-            <div class="container">
+            <div class="container hero-content">
                 <h1>AITU-MOTORS</h1>
                 <p>Experience the World's Most Extraordinary Machines</p>
                 <button class="btn btn-custom" onclick="showPage('collection')">
@@ -58,7 +57,7 @@
                     <div class="about-card text-center">
                         <div class="about-icon"><i class="fas fa-car"></i></div>
                         <h3>Premium Collection</h3>
-                        <p class="text-secondary">Discover 9 of the world's most exclusive hypercars</p>
+                        <p class="text-secondary">Discover most exclusive hypercars</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
@@ -83,12 +82,12 @@
                         class="active"></button>
                     <button type="button" data-bs-target="#carouselFeatured" data-bs-slide-to="1"></button>
                     <button type="button" data-bs-target="#carouselFeatured" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carouselFeatured" data-bs-slide-to="3"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="https://static1.topspeedimages.com/wordpress/wp-content/uploads/2024/01/resize_2020-bugatti-chiron-super-sport-300-1-1.jpg"
-                            class="d-block w-100" alt="Pagani Huayra R"
-                            style="height: 600px; object-fit: cover; border-radius:100px;">
+                            class="d-block w-100" alt="Pagani Huayra R">
                         <div class="carousel-caption">
                             <h2>Bugatti Chiron Super Sport</h2>
                             <p>The pinnacle of automotive engineering - 1,577 HP of pure power</p>
@@ -96,7 +95,7 @@
                     </div>
                     <div class="carousel-item">
                         <img src="https://i.ytimg.com/vi/PYWbyELOJQQ/maxresdefault.jpg" class="d-block w-100"
-                            alt="Pagani Huayra R" style="height: 600px; object-fit: cover; border-radius:100px ;">
+                            alt="Pagani Huayra R">
                         <div class="carousel-caption">
                             <h2>Koenigsegg Jesko Absolute</h2>
                             <p>Swedish hypercar perfection with 1,600 HP</p>
@@ -104,11 +103,18 @@
                     </div>
                     <div class="carousel-item">
                         <img src="https://img2.kapital.kz/aV817mgxeqk/el:true/rs:fit:1010:581/dpr:1.5/f:webp/czM6Ly9rYXBpdGFsLXN0YXRpYy9pbWcvMC82L2EvZC9iLzJkN2ZjMDM0N2YzZjkyNGE3YjEwMjY5MmIzMS5qcGc"
-                            class="d-block w-100" alt="Pagani Huayra R"
-                            style="height: 600px; object-fit: cover; border-radius:100px;">
+                            class="d-block w-100" alt="Pagani Huayra R">
                         <div class="carousel-caption">
                             <h2>Pagani Huayra R</h2>
                             <p>Art on wheels with a screaming 850 HP V12</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://avatars.mds.yandex.net/i?id=b4717d6e0b04698b776480e8babf7b47_l-8497330-images-thumbs&n=13"
+                            class="d-block w-100" alt="Red Bull Racing-Honda RBPT">
+                        <div class="carousel-caption">
+                            <h2>Red Bull Racing-Honda RBPT</h2>
+                            <p>Unmatched performance, powered by Honda — the Formula 1 champion machine.</p>
                         </div>
                     </div>
                 </div>
@@ -125,73 +131,71 @@
     </div>
     <div id="collectionPage" class="page" style="display: none;">
         <div class="container page-content">
-            <h1 class="page-title">Our Collection</h1>
+            <h1 class="page-title mt-5 pt-5">Our Collection</h1>
             <div class="row" id="carGrid"></div>
+
         </div>
     </div>
-    <div id="galleryPage" class="page" style="display: none;">
+    <div id="newsPage" class="page" style="display: none;">
         <div class="container page-content">
-            <h1 class="page-title">Gallery</h1>
+            <h1 class="page-title mt-5 pt-5">Latest News</h1>
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #2a2a3e, #3a3a4e);">
-                            🏎️</div>
-                        <div class="gallery-overlay">
-                            <h4>Exterior Design</h4>
-                            <p>Aerodynamic perfection</p>
+                <div class="col-lg-12 mx-auto exhibition">
+                    <div class="row ">
+                        <div class="col-6">
+                            <img class="newspic"
+                                src="https://avatars.mds.yandex.net/i?id=b4717d6e0b04698b776480e8babf7b47_l-8497330-images-thumbs&n=13"
+                                alt="">
+                        </div>
+                        <div class="col-6 pr2">
+                            <h1 class="spEx">Special Exhibition</h1>
+                            <h4 class="data">November 20, 2024</h4>
+                            <p>Experience an exclusive exhibition featuring brand new special hypercars never before
+                                seen! Get up close with the latest automotive masterpieces and meet industry experts.
+                            </p>
+                            <div class="row newpart">
+                                <div class="col-6">
+                                    <h3 class="cost">$20</h3>
+                                    <p>Enrollment Fee</p>
+                                </div>
+                                <div class="col-6">
+                                    <h3 class="cost">500</h3>
+                                    <p>Places Available</p>
+                                </div>
+                            </div>
+                            <div class="row enr-but">
+                                <button class="enroll" type="button" class="btn enroll" data-bs-toggle="modal"
+                                    data-bs-target="#enrollModal">Enroll Now</button>
+                            </div>
                         </div>
                     </div>
+
+
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #3a3a4e, #2a2a3e);">
-                            ⚙️</div>
-                        <div class="gallery-overlay">
-                            <h4>Engine Bay</h4>
-                            <p>Power and precision</p>
-                        </div>
-                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="enrollModalLabel">Enroll in Special Exhibition</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #2a2a3e, #3a3a4e);">
-                            🪑</div>
-                        <div class="gallery-overlay">
-                            <h4>Interior</h4>
-                            <p>Luxury meets performance</p>
+                <div class="modal-body">
+                    <h4 class="text-center mb-4" style="color: var(--secondary-color);">Fee: $20 | Places Available: 500
+                    </h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="userName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="userName" placeholder="Your Name" required>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #3a3a4e, #2a2a3e);">
-                            🎨</div>
-                        <div class="gallery-overlay">
-                            <h4>Custom Paint</h4>
-                            <p>Unique color schemes</p>
+                        <div class="mb-3">
+                            <label for="userEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="userEmail" placeholder="Your Email" required>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #2a2a3e, #3a3a4e);">
-                            ⚡</div>
-                        <div class="gallery-overlay">
-                            <h4>Track Mode</h4>
-                            <p>Performance unleashed</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #3a3a4e, #2a2a3e);">
-                            💎</div>
-                        <div class="gallery-overlay">
-                            <h4>Details</h4>
-                            <p>Craftsmanship excellence</p>
-                        </div>
-                    </div>
+                        <button type="submit" class="btn btn-primary">Submit Enrollment</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -199,18 +203,18 @@
 
     <div id="aboutPage" class="page" style="display: none;">
         <div class="container page-content">
-            <h1 class="page-title">About Us</h1>
+            <h1 class="page-title mt-5 pt-5">About Us</h1>
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <div class="about-card">
-                        <h2 style="color: var(--primary-color);">Welcome to Supercar Museum</h2>
+                        <h2 style="color: var(--primary-color);">Welcome to AITU Museum</h2>
                         <p class="mt-3" style="line-height: 1.8;">
-                            Since 2020, we've been curating the world's most exclusive collection of hypercars and
-                            supercars.
-                            Our virtual museum brings together automotive masterpieces from legendary manufacturers
-                            including
-                            Bugatti, Koenigsegg, Pagani, McLaren, Ferrari, Lamborghini, Porsche, Aston Martin, and
-                            Rimac.
+                            Since 2025, we've been curating an extraordinary collection that celebrates the full
+                            spectrum of automotive excellence — from timeless classics and rare vintage icons to the
+                            world’s most powerful hypercars and cutting-edge supercars.
+                            Our virtual museum unites legendary creations from marques such as Bugatti, Ferrari,
+                            Lamborghini, McLaren, Aston Martin, Porsche, Pagani, Koenigsegg, Rimac, and many more —
+                            preserving the art, heritage, and innovation of the automobile.
                         </p>
                         <p style="line-height: 1.8;">
                             Each vehicle in our collection represents the pinnacle of automotive engineering, combining
@@ -295,7 +299,7 @@
 
     <div id="contactPage" class="page" style="display: none;">
         <div class="container page-content">
-            <h1 class="page-title">Contact Us</h1>
+            <h1 class="page-title mt-5 pt-5">Contact Us</h1>
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <div class="row mb-4">
@@ -303,53 +307,56 @@
                             <div class="contact-info-box text-center">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <h5 class="mt-3">Address</h5>
-                                <p class="text-muted">123 Supercar Avenue<br>Monaco, MC 98000</p>
+                                <p class="text-secondary">Astana, Mangilik El</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="contact-info-box text-center">
                                 <i class="fas fa-phone"></i>
                                 <h5 class="mt-3">Phone</h5>
-                                <p class="text-muted">+377 123 456 789<br>Mon-Fri 9AM-6PM</p>
+                                <p class="text-secondary">+7-702-253-07-44<br>Mon-Fri 9AM-6PM</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="contact-info-box text-center">
                                 <i class="fas fa-envelope"></i>
                                 <h5 class="mt-3">Email</h5>
-                                <p class="text-muted">info@supercarmuseum.com<br>support@supercarmuseum.com</p>
+                                <p class="text-secondary">bekesdastan@gmail.com</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="about-card">
                         <h3 class="mb-4" style="color: var(--primary-color);">Send us a Message</h3>
-                        <form id="contactForm" novalidate>
+                        <form id="contactForm" action="https://formspree.io/f/xjkpndvp" method="POST" novalidate>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="firstName" class="form-label">First Name *</label>
-                                    <input type="text" class="form-control" id="firstName" placeholder="John" required>
+                                    <input type="text" class="form-control" id="firstName" placeholder="Aibat" required
+                                        name="first_Name">
                                     <div class="invalid-feedback">Please enter your first name.</div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="lastName" class="form-label">Last Name *</label>
-                                    <input type="text" class="form-control" id="lastName" placeholder="Doe" required>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Ertemir"
+                                        name="last_Name" required>
                                     <div class="invalid-feedback">Please enter your last name.</div>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email Address *</label>
-                                <input type="email" class="form-control" id="email" placeholder="john.doe@example.com"
-                                    required>
+                                <input type="email" class="form-control" id="email" placeholder="Aiba@gmail.com"
+                                    name="email" required>
                                 <div class="invalid-feedback">Please enter a valid email address.</div>
                             </div>
                             <div class="mb-3">
                                 <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" id="phone" placeholder="+1 234 567 8900">
+                                <input type="tel" class="form-control" id="phone" placeholder="+7 777 777 0007"
+                                    name="phone" required>
                             </div>
                             <div class="mb-3">
                                 <label for="subject" class="form-label">Subject *</label>
-                                <select class="form-select" id="subject" required>
+                                <select class="form-select" id="subject" required name="subject">
                                     <option value="">Choose a subject...</option>
                                     <option value="general">General Inquiry</option>
                                     <option value="visit">Virtual Tour Request</option>
@@ -361,11 +368,11 @@
                             <div class="mb-3">
                                 <label for="message" class="form-label">Message *</label>
                                 <textarea class="form-control" id="message" rows="5"
-                                    placeholder="Tell us about your inquiry..." required></textarea>
+                                    placeholder="Tell us about your inquiry..." name="message" required></textarea>
                                 <div class="invalid-feedback">Please enter your message.</div>
                             </div>
                             <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="newsletter">
+                                <input type="checkbox" class="form-check-input" id="newsletter" name="Subscription">
                                 <label class="form-check-label" for="newsletter">
                                     Subscribe to our newsletter for updates on new additions
                                 </label>
@@ -393,7 +400,7 @@
                         automotive excellence from anywhere in the world.</p>
                     <div class="social-icons mt-3">
                         <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/?hl=ru"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
@@ -429,7 +436,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 Supercar Museum. All rights reserved. | Designed with passion for automotive excellence
+                <p>&copy; 2025 Supercar Museum. All rights reserved.
                 </p>
             </div>
         </div>
@@ -457,7 +464,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="cars.js"></script>
     <script src="script.js"></script>
+
 </body>
 
 </html>
