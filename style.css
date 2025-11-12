@@ -479,19 +479,31 @@ footer {
 
     #newsPage .spEx {
         font-size: 1.8rem;
+        text-align: center;
     }
 
     #newsPage .data {
         font-size: 1.2rem;
+        text-align: center;
     }
 
-    #newsPage .newpart .col-6 {
-        width: 50%;
+    .exhibition{
+        margin:0;
+        padding:0 !important;
     }
-
+    .exhibition .row .col-6 {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .exhibition .row .col-6 p {
+        text-align: center;
+        margin:1rem 5rem; 
+    }
     #newsPage .enroll {
         font-size: 1rem;
-        padding: 0.8rem;
+        border-radius: 0;
+        border: 0;
+        
     }
 }
 
@@ -537,6 +549,8 @@ footer {
     .navbar-brand {
         font-size: 1rem;
     }
+
+    
 }
 
 .car-card {

@@ -68,12 +68,20 @@ function showPage(pageName) {
   $('html, body').animate({ scrollTop: 0 }, 500);
 }
 
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contactForm");
   const alertBox = document.getElementById("formAlert");
 
   form.addEventListener("submit", async function (event) {
     event.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.classList.add("was-validated");
+      return; 
+    }
+
+    form.classList.add("was-validated");
 
     const formData = new FormData(form);
 
@@ -94,19 +102,18 @@ document.addEventListener("DOMContentLoaded", function () {
           alertBox.style.display = "none";
         }, 5000);
       } else {
-
         alertBox.style.display = "block";
         alertBox.style.color = "red";
-        alertBox.textContent = " Something went wrong. Please try again.";
+        alertBox.textContent = "Something went wrong. Please try again.";
       }
-
     } catch (error) {
       alertBox.style.display = "block";
       alertBox.style.color = "red";
-      alertBox.textContent = " Network error. Please check your connection.";
+      alertBox.textContent = "Network error. Please check your connection.";
     }
   });
 });
+
 
 (function () {
   const form = document.getElementById('contactForm');
@@ -120,25 +127,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }, false);
 })();
 
-(function () {
-  const form = document.getElementById('newsForm');
-
-  form.addEventListener('submit', function (event) {
-    if (!form.checkValidity()) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-    form.classList.add('was-validated');
-  }, false);
-})();
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("newsForm");
   const alertBox = document.getElementById("formAl");
 
   form.addEventListener("submit", async function (event) {
     event.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.classList.add("was-validated");
+      return; 
+    }
+
+    form.classList.add("was-validated");
 
     const formData = new FormData(form);
 
@@ -159,16 +160,14 @@ document.addEventListener("DOMContentLoaded", function () {
           alertBox.style.display = "none";
         }, 5000);
       } else {
-
         alertBox.style.display = "block";
         alertBox.style.color = "red";
-        alertBox.textContent = " Something went wrong. Please try again.";
+        alertBox.textContent = "Something went wrong. Please try again.";
       }
-
     } catch (error) {
       alertBox.style.display = "block";
       alertBox.style.color = "red";
-      alertBox.textContent = " Network error. Please check your connection.";
+      alertBox.textContent = "Network error. Please check your connection.";
     }
   });
 });
