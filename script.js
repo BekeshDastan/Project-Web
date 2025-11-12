@@ -1,13 +1,13 @@
-$(document).ready(function() {
+$(document).ready(function () {
   renderCarGrid();
 });
 
 function renderCarGrid() {
-    const carGrid = $('#carGrid');
-    carGrid.empty();
+  const carGrid = $('#carGrid');
+  carGrid.empty();
 
-    cars.forEach((car, index) => {
-        const card = $(`
+  cars.forEach((car, index) => {
+    const card = $(`
                     <div class="col-lg-4 col-md-6">
                         <div class="car-card" data-index="${index}">
                             <div class="car-image">
@@ -21,25 +21,25 @@ function renderCarGrid() {
                         </div>
                     </div>
                 `);
-        carGrid.append(card);
-    });
+    carGrid.append(card);
+  });
 }
 
 $(document).on('click', '.car-card', function () {
-    const index = $(this).data('index');
-    openModal(index);
+  const index = $(this).data('index');
+  openModal(index);
 });
 
 function openModal(index) {
-    const car = cars[index];
-    $('#modalCarName').text(car.name);
-    $('#modalCarPrice').text(car.price);
+  const car = cars[index];
+  $('#modalCarName').text(car.name);
+  $('#modalCarPrice').text(car.price);
 
-    const specsGrid = $('#specsGrid');
-    specsGrid.empty();
+  const specsGrid = $('#specsGrid');
+  specsGrid.empty();
 
-    for (const [label, value] of Object.entries(car.specs)) {
-        const specItem = $(`
+  for (const [label, value] of Object.entries(car.specs)) {
+    const specItem = $(`
                      <div class="col-md-6">
                         <div class="spec-item">
                             <div ="spec-label">${label}</div>
@@ -47,25 +47,25 @@ function openModal(index) {
                         </div>
                     </div>
                 `);
-        specsGrid.append(specItem);
-    }
+    specsGrid.append(specItem);
+  }
 
-    const modal = new bootstrap.Modal(document.getElementById('carModal'));
-    modal.show();
+  const modal = new bootstrap.Modal(document.getElementById('carModal'));
+  modal.show();
 }
 
 function showPage(pageName) {
-    $('.page').hide();
-    $(`#${pageName}Page`).fadeIn(300);
+  $('.page').hide();
+  $(`#${pageName}Page`).fadeIn(300);
 
-    $('.nav-link').removeClass('active');
-    $('.nav-link').each(function () {
-        if ($(this).attr('onclick').includes(pageName)) {
-            $(this).addClass('active');
-        }
-    });
+  $('.nav-link').removeClass('active');
+  $('.nav-link').each(function () {
+    if ($(this).attr('onclick').includes(pageName)) {
+      $(this).addClass('active');
+    }
+  });
 
-    $('html, body').animate({ scrollTop: 0 }, 500);
+  $('html, body').animate({ scrollTop: 0 }, 500);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
         alertBox.style.display = "block";
         alertBox.style.color = "green";
         alertBox.textContent = "Thank you! Your message has been sent successfully.";
-        
+
         form.reset();
         setTimeout(() => {
           alertBox.style.display = "none";
@@ -113,9 +113,62 @@ document.addEventListener("DOMContentLoaded", function () {
 
   form.addEventListener('submit', function (event) {
     if (!form.checkValidity()) {
-      event.preventDefault();     
+      event.preventDefault();
       event.stopPropagation();
     }
-    form.classList.add('was-validated'); 
+    form.classList.add('was-validated');
   }, false);
 })();
+
+(function () {
+  const form = document.getElementById('newsForm');
+
+  form.addEventListener('submit', function (event) {
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    form.classList.add('was-validated');
+  }, false);
+})();
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("newsForm");
+  const alertBox = document.getElementById("formAl");
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        alertBox.style.display = "block";
+        alertBox.style.color = "green";
+        alertBox.textContent = "Thank you! Your message has been sent successfully.";
+
+        form.reset();
+        setTimeout(() => {
+          alertBox.style.display = "none";
+        }, 5000);
+      } else {
+
+        alertBox.style.display = "block";
+        alertBox.style.color = "red";
+        alertBox.textContent = " Something went wrong. Please try again.";
+      }
+
+    } catch (error) {
+      alertBox.style.display = "block";
+      alertBox.style.color = "red";
+      alertBox.textContent = " Network error. Please check your connection.";
+    }
+  });
+});
